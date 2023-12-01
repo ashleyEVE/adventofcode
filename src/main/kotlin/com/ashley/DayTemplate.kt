@@ -6,7 +6,7 @@ class DayTemplate {
 
     private fun readData(): Nothing? {
         val readData: Nothing? = null;
-        val resource = ClassLoader.getSystemResource("test.input")
+        val resource = ClassLoader.getSystemResource("dayX/test.txt")
         resource.readText().lines().forEach { line ->
             if (line != "") {
                 println("We read things, yay!")
