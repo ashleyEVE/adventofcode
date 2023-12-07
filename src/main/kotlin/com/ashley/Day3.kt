@@ -6,19 +6,6 @@ import kotlin.collections.HashSet
 import kotlin.math.log
 
 class Day3 {
-
-    private fun readData(): List<String> {
-        val readData = ArrayList<String>()
-        val resource = ClassLoader.getSystemResource("day3/final.txt")
-        resource.readText().lines().forEach { line ->
-            if (line != "") {
-                readData.add(line)
-            }
-        }
-
-        return readData;
-    }
-
     val partSymbolMatchList = HashSet<Char>()
 
 
@@ -69,7 +56,7 @@ class Day3 {
     }
 
     fun answer1(): Int {
-        val data = readData()
+        val data = FileReader.readData(3, true)
 
         val maxWidth = data[0].length;
         val maxHeight = data.size;
@@ -134,7 +121,7 @@ class Day3 {
     }
 
     fun answer2(): Int {
-        val data = readData()
+        val data = FileReader.readData(3, true)
 
         val maxWidth = data[0].length;
         val maxHeight = data.size;

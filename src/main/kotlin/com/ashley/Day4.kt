@@ -4,21 +4,8 @@ import kotlin.math.log
 import kotlin.math.pow
 
 class Day4 {
-
-    private fun readData(): List<String> {
-        val readData = ArrayList<String>()
-        val resource = ClassLoader.getSystemResource("day4/final.txt")
-        resource.readText().lines().forEach { line ->
-            if (line != "") {
-                readData.add(line)
-            }
-        }
-
-        return readData;
-    }
-
     fun answer1(): Int {
-        val data = readData()
+        val data = FileReader.readData(4, true)
         var total = 0
 
         for (line in data) {
@@ -40,7 +27,7 @@ class Day4 {
     }
 
     fun answer2(): Int {
-        val data = readData()
+        val data = FileReader.readData(4, true)
 
         var total = 0
 

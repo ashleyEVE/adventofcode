@@ -3,19 +3,6 @@ package com.ashley
 import kotlin.math.log
 
 class Day2 {
-
-    private fun readData(): ArrayList<String> {
-        val readData = ArrayList<String>()
-        val resource = ClassLoader.getSystemResource("day2/final.txt")
-        resource.readText().lines().forEach { line ->
-            if (line != "") {
-                readData.add(line)
-            }
-        }
-
-        return readData;
-    }
-
     fun readGameNumber(line: String): Pair<Int, List<String>> {
         val dataList = line.split(":")
 
@@ -30,7 +17,7 @@ class Day2 {
         var invalidGame = false
         var counter = 0
 
-        val data = readData();
+        val data = FileReader.readData(2, true)
 
         for (line in data) {
             invalidGame = false
@@ -69,7 +56,7 @@ class Day2 {
         var maxRed = 0
         var maxBlue = 0
 
-        val data = readData();
+        val data = FileReader.readData(2, true)
 
         for (line in data) {
             maxGreen = 0

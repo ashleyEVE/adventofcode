@@ -4,21 +4,8 @@ import kotlin.collections.ArrayDeque
 import kotlin.collections.ArrayList
 
 class Day1 {
-
-    private fun readData(): ArrayList<String> {
-        val readData = ArrayList<String>()
-        val resource = ClassLoader.getSystemResource("day1/final.txt")
-        resource.readText().lines().forEach { line ->
-            if (line != "") {
-                readData.add(line);
-            }
-        }
-
-        return readData;
-    }
-
     fun answer1(): Int {
-        val data = readData();
+        val data = FileReader.readData(1, true)
         var total = 0;
 
         for (line in data) {
@@ -33,8 +20,7 @@ class Day1 {
     val numberStrings = listOf( "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" )
 
     fun answer2(): Int {
-
-        val data = readData();
+        val data = FileReader.readData(1, true)
 
         var characterBuffer = ArrayDeque<Char>()
 
